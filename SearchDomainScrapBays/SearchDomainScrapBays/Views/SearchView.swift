@@ -46,6 +46,12 @@ struct SearchView: View {
                             .padding(.top, 20)
                     }
                 }
+                
+                // Show Results when available
+                if !viewModel.domains.isEmpty {
+                    ResultsView(domains: viewModel.domains)
+                        .padding(.top, 20)
+                }
             }
             .padding(.top, 20)
             .navigationBarTitleDisplayMode(.inline)
