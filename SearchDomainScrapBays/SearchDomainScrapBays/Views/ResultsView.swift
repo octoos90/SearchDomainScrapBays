@@ -29,6 +29,11 @@ struct ResultsView: View {
                         .background(Color.white)
                         .cornerRadius(8)
                         .shadow(radius: 5)
+                        NavigationLink(destination: PurchaseView(domain: domain)) {
+                            EmptyView()
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .opacity(0)
                     }
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.clear)
